@@ -20,6 +20,7 @@
 import Grid from "@mui/material/Grid";
 import Icon from "@mui/material/Icon";
 import { Card, LinearProgress, Stack } from "@mui/material";
+import VuiButton from "components/VuiButton";
 
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
@@ -33,13 +34,9 @@ import DefaultProjectCard from "examples/Cards/ProjectCards/DefaultProjectCard";
 import PlatformSettings from "layouts/profile/components/PlatformSettings";
 
 // Images
-import profile1 from "assets/images/profile-1.png";
-import profile2 from "assets/images/profile-2.png";
-import profile3 from "assets/images/profile-3.png";
-import team1 from "assets/images/avatar1.png";
-import team2 from "assets/images/avatar2.png";
-import team3 from "assets/images/avatar3.png";
-import team4 from "assets/images/avatar4.png";
+import crypto1 from "assets/images/crypto-1.jpeg";
+import crypto2 from "assets/images/crypto-2.jpeg";
+import crypto3 from "assets/images/crypto-3.jpeg";
 
 // Vision UI Dashboard React base styles
 import typography from "assets/theme/base/typography";
@@ -101,45 +98,48 @@ function Dashboard() {
               <Grid container spacing={3}>
                 <Grid item xs={12} md={6} xl={4}>
                   <DefaultProjectCard
-                    image={profile1}
-                    label="project #2"
+                    image={crypto1}
+                    label=""
                     title="Apa itu Dompet Bolafy?"
-                    description="As Uber works through a huge amount of internal management turmoil."
+                    description="Dompet Bolafy adalah tempat khusus untuk menyimpan Koleksi anda, untuk di pamerkan atau di perjual belikan"
                     action={{
-                      type: "internal",
-                      route: "/pages/profile/profile-overview",
+                      type: "external",
+                      route: `https://medium.com/@notification_90225/apa-itu-dompet-bolafy-cc009b518fa`,
                       color: "white",
-                      label: "VIEW ALL",
+                      label: "Lihat Selengkapnya",
                     }}
-                  
+                
                   />
+
                 </Grid>
                 <Grid item xs={12} md={6} xl={4}>
                   <DefaultProjectCard
-                    image={profile2}
-                    label="project #1"
-                    title="scandinavian"
-                    description="Music is something that every person has his or her own specific opinion about."
+                    image={crypto2}
+                    label=""
+                    title="Apa fungsi Dompet Bolafy?"
+                    description="Dengan Dompet Bolafy, kamu bisa memamerkan koleksi mu di mana saja lho, termasuk situs NFT terkenal Opensea!
+
+                    "
                     action={{
-                      type: "internal",
-                      route: "/pages/profile/profile-overview",
+                      type: "external",
+                      route: "https://medium.com/@notification_90225/apa-itu-dompet-bolafy-cc009b518fa",
                       color: "white",
-                      label: "VIEW ALL",
+                      label: "Lihat Selengkapnya",
                     }}
                     
                   />
                 </Grid>
                 <Grid item xs={12} md={6} xl={4}>
                   <DefaultProjectCard
-                    image={profile3}
-                    label="project #3"
-                    title="minimalist"
-                    description="Different people have different taste, and various types of music."
+                    image={crypto3}
+                    label=""
+                    title="Gimana cara membuat Dompet Bolafy?"
+                    description="Gampang kok! Log in dengan akun Bolafy anda dan klik 'Klaim Dompet Bolafy Saya' di atas halaman ini"
                     action={{
-                      type: "internal",
-                      route: "/pages/profile/profile-overview",
+                      type: "external",
+                      route: "https://medium.com/@notification_90225/apa-itu-dompet-bolafy-cc009b518fa",
                       color: "white",
-                      label: "VIEW ALL",
+                      label: "Lihat Selengkapnya",
                     }}
                     
                   />

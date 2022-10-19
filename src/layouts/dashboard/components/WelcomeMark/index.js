@@ -117,7 +117,7 @@ const WelcomeMark = () => {
             
           }}
         >
-          <VuiButton onClick={handleSignIn} variant="gradient" color="info"> Klaim Wallet Anda <Icon>lock</Icon> </VuiButton>
+          <VuiButton onClick={handleSignIn} variant="gradient" color="info"> Klaim Dompet Bolafy Saya <Icon>lock</Icon> </VuiButton>
           
         </VuiTypography>
       </VuiBox>
