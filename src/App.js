@@ -48,6 +48,9 @@ import routes from "routes";
 // Vision UI Dashboard React contexts
 import { useVisionUIController, setMiniSidenav, setOpenConfigurator } from "context";
 
+
+
+
 export default function App() {
   const [controller, dispatch] = useVisionUIController();
   const { miniSidenav, direction, layout, openConfigurator, sidenavColor } = controller;
@@ -122,32 +125,28 @@ export default function App() {
       right="2rem"
       bottom="2rem"
       zIndex={99}
-      color="white"
+      color="red"
       sx={{ cursor: "pointer" }}
       onClick={handleConfiguratorOpen}
-    >
-      <Icon fontSize="default" color="inherit">
-        settings
-      </Icon>
+    > 
     </VuiBox>
   );
 
-  return direction === "rtl" ? (
+  return (
     <CacheProvider value={rtlCache}>
       <ThemeProvider theme={themeRTL}>
         <CssBaseline />
         {layout === "dashboard" && (
           <>
-            <Sidenav
+            {/* <Sidenav
               color={sidenavColor}
               brand=""
-              brandName="VISION UI FREE"
+              brandName="Penis"
               routes={routes}
               onMouseEnter={handleOnMouseEnter}
               onMouseLeave={handleOnMouseLeave}
-            />
+            /> */}
             <Configurator />
-            {configsButton}
           </>
         )}
         {layout === "vr" && <Configurator />}
@@ -157,28 +156,5 @@ export default function App() {
         </Switch>
       </ThemeProvider>
     </CacheProvider>
-  ) : (
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      {layout === "dashboard" && (
-        <>
-          <Sidenav
-            color={sidenavColor}
-            brand=""
-            brandName="VISION UI FREE"
-            routes={routes}
-            onMouseEnter={handleOnMouseEnter}
-            onMouseLeave={handleOnMouseLeave}
-          />
-          <Configurator />
-          {configsButton}
-        </>
-      )}
-      {layout === "vr" && <Configurator />}
-      <Switch>
-        {getRoutes(routes)}
-        <Redirect from="*" to="/dashboard" />
-      </Switch>
-    </ThemeProvider>
-  );
+  ) 
 }
