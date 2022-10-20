@@ -18,20 +18,16 @@
 
 // @mui material components
 import Grid from "@mui/material/Grid";
-import Icon from "@mui/material/Icon";
-import { Card, LinearProgress, Stack } from "@mui/material";
-import VuiButton from "components/VuiButton";
+import { Card } from "@mui/material";
 
 // Vision UI Dashboard React components
 import VuiBox from "components/VuiBox";
 import VuiTypography from "components/VuiTypography";
-import VuiProgress from "components/VuiProgress";
 
 // Vision UI Dashboard React example components
 import DashboardLayout from "examples/LayoutContainers/DashboardLayout";
 import DashboardNavbar from "examples/Navbars/DashboardNavbar";
 import DefaultProjectCard from "examples/Cards/ProjectCards/DefaultProjectCard";
-import PlatformSettings from "layouts/profile/components/PlatformSettings";
 
 // Images
 import crypto1 from "assets/images/crypto-1.jpeg";
@@ -39,35 +35,14 @@ import crypto2 from "assets/images/crypto-2.jpeg";
 import crypto3 from "assets/images/crypto-3.jpeg";
 
 // Vision UI Dashboard React base styles
-import typography from "assets/theme/base/typography";
 import colors from "assets/theme/base/colors";
 
 // Dashboard layout components
 import WelcomeMark from "layouts/dashboard/components/WelcomeMark";
-import Projects from "layouts/dashboard/components/Projects";
-import OrderOverview from "layouts/dashboard/components/OrderOverview";
-import SatisfactionRate from "layouts/dashboard/components/SatisfactionRate";
-import ReferralTracking from "layouts/dashboard/components/ReferralTracking";
 
-// React icons
-import { IoIosRocket } from "react-icons/io";
-import { IoGlobe } from "react-icons/io5";
-import { IoBuild } from "react-icons/io5";
-import { IoWallet } from "react-icons/io5";
-import { IoDocumentText } from "react-icons/io5";
-import { FaShoppingCart } from "react-icons/fa";
-
-// Data
-import LineChart from "examples/Charts/LineCharts/LineChart";
-import BarChart from "examples/Charts/BarCharts/BarChart";
-import { lineChartDataDashboard } from "layouts/dashboard/data/lineChartData";
-import { lineChartOptionsDashboard } from "layouts/dashboard/data/lineChartOptions";
-import { barChartDataDashboard } from "layouts/dashboard/data/barChartData";
-import { barChartOptionsDashboard } from "layouts/dashboard/data/barChartOptions";
 
 function Dashboard() {
   const { gradients } = colors;
-  const { cardContent } = gradients;
 
   return (
     <DashboardLayout>

@@ -32,11 +32,14 @@ init({
   theme: 'dark',
   network: 'matic',
   authProviders: ['google', 'facebook', 'twitter', 'apple', 'email'],
+  logoURI: 'https://images.tiketnft.com/images/upload-image/logo/logo-bolafy.png'
 })
 
+// Alchemy ID untuk testing chain Matic Mumbai ->testnet
 const ALC_MATICMUM = 'pb7U0MNEw_0Pj8k4OvRXBikPlaA0Igt3'
 const MATICMUM_ID = 80001
 
+// Alchemy ID untuk testing chain Matic -> main net
 const ALC_POLYGON = 'lNBdnJqMlx6W92SYs4c8nO6C_kGaDvtK'
 const MATIC_ID = 137
 
@@ -55,6 +58,7 @@ const WelcomeMark = () => {
   }, [user])
 
   const handleSignIn = async () => {
+    // Check if user udah punya wallet
     const signInResult = await signIn()
     setUser(signInResult.user ?? null)
   }
